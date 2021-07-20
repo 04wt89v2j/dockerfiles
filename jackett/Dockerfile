@@ -28,4 +28,6 @@ USER jackett
 VOLUME ["/config", "/data/"]
 WORKDIR /config
 
-CMD ["/opt/Jackett/jackett", "--NoUpdates"]
+COPY script/ /
+
+CMD ["bash", "run.sh"]
